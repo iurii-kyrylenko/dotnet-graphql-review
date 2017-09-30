@@ -4,9 +4,9 @@ using GraphQL.Types;
 
 namespace GraphQLReview
 {
-    public static class BaseExamples
+    public static class BaseExample
     {
-        public static string HelloWorld()
+        public static void HelloWorld()
         {
             var schema = Schema.For(@"
                 type Query {
@@ -22,7 +22,7 @@ namespace GraphQLReview
                 _.Root = root;
             });
 
-            return result;
+            Console.WriteLine(result);
         }
      }
 }
