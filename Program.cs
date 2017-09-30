@@ -48,7 +48,7 @@ namespace GraphQLReview
             container.Register<CharacterInterface>();
             container.Singleton(
                 new StarWarsSchema(
-                    new FuncDependencyResolver(type => container.Get(type))
+                    new FuncDependencyResolver(container.Get)
                 )
             );
 
